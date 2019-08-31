@@ -3,25 +3,15 @@ import java.util.Scanner;
 public class Main {
 
 	public static double safeAssests(int a, double i) {
-		double agePercent = a * 0.01;
+		//Round the age to nearest multiple of 10	
+		int x = (a/10)*10;  
+		int y = x + 10; //Next Rounded Number
+		
+		double agePercent = y * 0.01;
 		double safeFund = i * agePercent;
 		return safeFund;
 		
 	}
-	
-	
-	public static double own(int ag, double in) {
-	
-	//Round the age to nearest multiple of 10	
-		int x = (ag/10)*10;  
-        int y = x + 10; //Next Rounded Number
-        
-        int exactPercentNumber = y-ag;
-        double exactPercent = exactPercentNumber*0.01;
-	    double yourFund = in * exactPercent;
-		return yourFund;
-	}
-	
 	
 	
 	public static void main(String[] args) {
@@ -33,15 +23,15 @@ public class Main {
 	double income = sc.nextDouble();
 	sc.close();
 	
-	if(age<100) {
+	if(age<90) {
 	double finalsafeFund = safeAssests(age, income);
-	double finalyourFund = own(age, income);
+	double finalyourFund = income* 0.05;
 	double sum = finalsafeFund + finalyourFund;
 	double riskyFund = income - sum;
 	
 	//Part 1 (Safe Fund)
-	//Dividing Safe Fund into 60% and 40%
-	double savingsAcc = 0.6 * finalsafeFund;
+	//Dividing Safe Fund into 70% and 30%
+	double savingsAcc = 0.7 * finalsafeFund;
 	double longAcc = finalsafeFund - savingsAcc;
 	System.out.println();
 	System.out.println("SAFE FUND");
@@ -56,17 +46,17 @@ public class Main {
 	System.out.println("Invest in Yourself: " + yourself);
 	System.out.println("Invest in your passion/business: " + business + System.lineSeparator());
 	
-	//Part 3 (Risky Fund)
-	//Dividing Risky Fund into 70% and 30%
+	//Part 3 (Risk Fund)
+	//Dividing Risk Fund into 70% and 30%
 	double longTerm = riskyFund * 0.7;
 	double shortTerm = riskyFund - longTerm;
-	System.out.println("RISKY FUND");
+	System.out.println("RISK FUND");
 	System.out.println("Put it in your Long Term investment(Stocks, Crypto etc.): "+ longTerm);
 	System.out.println("Use it for Short Term money gain(Trading etc.): "+ shortTerm);
 	}
 	
 	else {
-		System.out.println("You are 100+ years young. Damn bro, you got your health 100% right. Why worry about wealth now?");
+		System.out.println("You are 90+ years young. Chill, don't worry about wealth now!");
 	}
 	
 	
