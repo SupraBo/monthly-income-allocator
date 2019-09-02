@@ -51,7 +51,7 @@ I developed this fund allocation technique myself and will continue to develop/u
 ---
 
 ## How you should use it?
-- You can use this [webisite](https://suprabo.github.io/MoneyAllocator/) every month or just **copy** the code every month(as i will continue to update it and make it more perfect) from this repository.
+- You can use this [website](https://suprabo.github.io/MoneyAllocator/) every month or just **copy** the code every month(as i will continue to update it and make it more perfect) from this repository.
 - **Paste** it in any Java environment. You can paste it online, [here](https://www.onlinegdb.com/online_java_compiler).
 - **Run** it.
 - **Boom**. Your monthly money management got a bit easier.
